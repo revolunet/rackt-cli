@@ -1,9 +1,9 @@
-var path = require('path');
-var webpack = require('webpack');
-var BASE_DIR = process.cwd();
-var COMPONENT_FILE = process.env.COMPONENT_FILE;
-var COMPONENT_NAME = process.env.COMPONENT_NAME;
-var plugins = [];
+const path = require('path');
+const webpack = require('webpack');
+const BASE_DIR = process.cwd();
+const COMPONENT_FILE = process.env.COMPONENT_FILE;
+const COMPONENT_NAME = process.env.COMPONENT_NAME;
+const plugins = [];
 
 function getPackageMain() {
   return require(path.resolve(BASE_DIR, 'package.json')).main;
