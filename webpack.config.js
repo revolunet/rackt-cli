@@ -23,7 +23,7 @@ function buildEntries() {
 module.exports = {
 
   entry: buildEntries(),
-
+  devtool: 'source-map',
   output: {
     filename: '[name].js',
     chunkFilename: '[id].chunk.js',
