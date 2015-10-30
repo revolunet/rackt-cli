@@ -2,6 +2,4 @@
 
 originate=$RACKT_PATH/node_modules/.bin/originate
 
-$originate ${2-react-component} $1
-
-cd $1
+$originate ${2-react-component-revolunet} $1
