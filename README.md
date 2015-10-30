@@ -2,10 +2,12 @@
 
 Command line interface for automating common tasks when building React.js components.
 
+Maintained fork of https://github.com/mzabriskie/rackt-cli with some improvements
+
 ## Installing
 
 ```bash
-$ npm install -g rackt-cli
+$ npm install -g rackt-cli-revolunet
 ```
 
 ## About
@@ -17,7 +19,8 @@ The motivation for this CLI is to make it simple to get started when creating a 
 | Command             | Purpose                                                               |
 | ------------------- | --------------------------------------------------------------------- |
 | `rackt`             | Prints out a list of available commands.                              |
-| `rackt init <name>` | Creates a folder called `<name>` and generates a component structure. |
+| `rackt init <name>` | Creates a folder called `<name>` and generates a fresh component structure. |
+| `rackt init <name> <template>` | Use given originate project instead of default [react-component](https://github.com/knomedia/originate-react-component) |
 | `rackt build`       | Builds the component to `dist/` for UMD, and `build/` for CommonJS.   |
 | `rackt server`      | Starts the dev server using port `8080`.                              |
 | `rackt release`     | Publish a new release to npm. Use `--preview` to preview release.     |
@@ -29,6 +32,11 @@ The motivation for this CLI is to make it simple to get started when creating a 
 
 The `init` command generates a component structure based on the opinions of this CLI.
 It provides a basic working component, along with a simple example, and a failing test.
+
+rackt-cli use [originate](https://www.npmjs.com/package/originate) to initialize the project boilerplate, and use [react-component](https://www.npmjs.com/package/originate-react-component) by default. If you want a custom boilerplate, provide the name as second argument.
+
+ex: `rackt init myproject my-custom-boilerplate` 
+
 
 #### `build`
 
