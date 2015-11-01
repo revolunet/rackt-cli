@@ -19,12 +19,6 @@ eval $BUILD
 #$babel -d build/lib ./lib
 
 
-# Generate bundle for Bower
-DIST="$webpack --devtool source-map --config $webpackConfig"
-mkdir -p dist
-eval $DIST
-eval "MINIFY=1 $DIST"
-
 # Copy package
 cp README.md build/
 node -p 'p=require("./package");p.scripts=p.devDependencies=undefined;p.main="./index.js";JSON.stringify(p,null,2)' > build/package.json
