@@ -16,16 +16,16 @@ The motivation for this CLI is to make it simple to get started when creating a 
 
 ## Usage
 
-| Command             | Purpose                                                               |
-| ------------------- | --------------------------------------------------------------------- |
-| `rackt`             | Prints out a list of available commands.                              |
+| Command             | Purpose                                                                     |
+| ------------------- | --------------------------------------------------------------------------- |
+| `rackt`             | Prints out a list of available commands.                                    |
 | `rackt init <name>` | Creates a folder called `<name>` and generates a fresh component structure. |
-| `rackt init <name> <template>` | Use given originate project instead of default [react-component](https://github.com/knomedia/originate-react-component) |
-| `rackt build`       | Builds the component to `dist/` for UMD, and `build/` for CommonJS.   |
-| `rackt server`      | Starts the dev server using port `8080`.                              |
-| `rackt release`     | Publish a new release to npm. Use `--preview` to preview release.     |
-| `rackt test`        | Runs the test suite. Use `--single-run` for single run.               |
-| `rackt pages`       | Deploys the examples to gh-pages.                                     |
+| `rackt build`       | Builds the component to `build/` for CommonJS.                              |
+| `rackt lint`        | Lint sources and examples                                                   |
+| `rackt server`      | Starts the dev server using port `8080`.                                    |
+| `rackt release`     | Publish a new release to npm. Use `--preview` to preview release.           |
+| `rackt test`        | Runs the test suite. Use `--single-run` for single run.                     |
+| `rackt pages`       | Deploys the examples to gh-pages.                                           |
 
 
 #### `init`
@@ -33,9 +33,7 @@ The motivation for this CLI is to make it simple to get started when creating a 
 The `init` command generates a component structure based on the opinions of this CLI.
 It provides a basic working component, along with a simple example, and a failing test.
 
-rackt-cli use [originate](https://www.npmjs.com/package/originate) to initialize the project boilerplate, and use [react-component](https://www.npmjs.com/package/originate-react-component) by default. If you want a custom boilerplate, provide the name as second argument.
-
-ex: `rackt init myproject my-custom-boilerplate` 
+rackt-cli use [originate](https://www.npmjs.com/package/originate) to initialize the project boilerplate, and use [react-component-revolunet](https://www.npmjs.com/package/originate-react-component-revolunet) by default. If you want a custom boilerplate, provide the name as second argument.
 
 
 #### `build`
@@ -65,14 +63,6 @@ You can put these files alongside your source, or under sub-folders like `__test
 #### `pages`
 
 The `pages` command will deploy your examples to a `gh-pages` branch.
-
-## Customize
-
- - If needed, you can override some default configs files in your project :
-
-    - webpack.config.js
-    - webpack.build.js
-    - .eslintrc
 
 ## License
 

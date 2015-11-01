@@ -1,5 +1,5 @@
 #!/bin/bash
 
-eslint=$RACKT_PATH/node_modules/.bin/eslint
+eslint=./node_modules/.bin/eslint
 
 $eslint -c ./.eslintrc lib/* examples/*

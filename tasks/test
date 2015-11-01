@@ -1,5 +1,5 @@
 #!/bin/bash
 
-zuul=$RACKT_PATH/node_modules/.bin/zuul
+zuul=./node_modules/.bin/zuul
 
-NODE_ENV=test $zuul --local 8080 -- ./lib/components/__tests__/**/*.js
+NODE_ENV=test $zuul --phantom ./lib/components/__tests__/**/*.js 

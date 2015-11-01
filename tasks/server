@@ -1,6 +1,6 @@
 #!/bin/bash
 
-server=$RACKT_PATH/node_modules/.bin/webpack-dev-server
+server=./node_modules/.bin/webpack-dev-server
 
 # get available PORT
 PORT=`$RACKT_PATH/tasks/getAvailablePort`

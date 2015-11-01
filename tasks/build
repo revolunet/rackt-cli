@@ -1,7 +1,7 @@
 #!/bin/bash -e
 
-babel=$RACKT_PATH/node_modules/.bin/babel
-webpack=$RACKT_PATH/node_modules/.bin/webpack
+babel=./node_modules/.bin/babel
+webpack=./node_modules/.bin/webpack
 
 # Clean old build
 rm -rf build/

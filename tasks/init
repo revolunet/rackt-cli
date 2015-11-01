@@ -1,5 +1,18 @@
 #!/bin/bash -e
 
-originate=$RACKT_PATH/node_modules/.bin/originate
+originate=./node_modules/.bin/originate
 
 $originate ${2-react-component-revolunet} $1
+
+cd $1
+
+npm i
+
+git init
+
+git add . 
+
+git commit -m 'initial commit'
+
+# initial tag for changelog generation
+git tag v0.0.0

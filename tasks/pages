@@ -36,7 +36,7 @@ echo "include: [__build__]" > _config.yml
 git add _config.yml
 
 # create basic homepage using rackt-cli babel-node
-echo `$RACKT_PATH/node_modules/.bin/babel-node $(dirname "$0")/getExamplesIndex.js` > index.html
+echo `./node_modules/.bin/babel-node $(dirname "$0")/getExamplesIndex.js` > index.html
 git add index.html
 
 echo "▶ commit & push"
