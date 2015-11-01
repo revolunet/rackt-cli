@@ -1,0 +1,10 @@
+#!/bin/bash
+
+eslint=$RACKT_PATH/node_modules/.bin/eslint
+
+
+# get user defined config if any or use rackt-cli one
+. $RACKT_PATH/tasks/getFilePath
+esLintConfig=`getFilePath .eslintrc`
+
+$eslint -c $esLintConfig lib/* examples/*
