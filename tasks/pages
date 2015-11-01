@@ -26,11 +26,8 @@ git branch -D gh-pages
 echo "▶ create local orphan branch gh-pages"
 git checkout --orphan gh-pages
 
-# get user defined config if any or use rackt-cli one
-. $RACKT_PATH/tasks/getFilePath
-webpackConfig=`getFilePath webpack.config.js`
 
-$RACKT_PATH/node_modules/.bin/webpack --config $webpackConfig
+$RACKT_PATH/node_modules/.bin/webpack --config ./webpack.config.js
 
 # exclude everything from git staging except examples
 find -E . ! -regex '.*/(examples|node_modules|\.git).*' -exec git rm -r --cached {} \;

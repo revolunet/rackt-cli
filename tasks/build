@@ -3,21 +3,11 @@
 babel=$RACKT_PATH/node_modules/.bin/babel
 webpack=$RACKT_PATH/node_modules/.bin/webpack
 
-# get user defined config if any or use rackt-cli one
-. $RACKT_PATH/tasks/getFilePath
-webpackConfig=`getFilePath webpack.build.js`
-
-
-
 # Clean old build
 rm -rf build/
 
 # Generate bundle for NPM
-BUILD="$webpack --devtool source-map --config $webpackConfig --output-path ./build --output-filename index.js"
-mkdir -p build
-eval $BUILD
-#$babel -d build/lib ./lib
-
+$webpack --devtool source-map --config ./webpack.build.js --output-path ./build --output-filename index.js
 
 # Copy package
 cp README.md build/

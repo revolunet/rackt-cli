@@ -2,11 +2,7 @@
 
 server=$RACKT_PATH/node_modules/.bin/webpack-dev-server
 
-# get user defined config if any or use rackt-cli one
-. $RACKT_PATH/tasks/getFilePath
-webpackConfig=`getFilePath webpack.config.js`
-
 # get available PORT
 PORT=`$RACKT_PATH/tasks/getAvailablePort`
 
-$server --inline --config $webpackConfig --host 0.0.0.0 --port $PORT --content-base examples/ "$@"
+$server --inline --config ./webpack.config.js --host 0.0.0.0 --port $PORT --content-base examples/ "$@"

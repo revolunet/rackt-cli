@@ -1,10 +1,5 @@
 #!/bin/bash
 
-
 zuul=$RACKT_PATH/node_modules/.bin/zuul
 
-# get user defined config if any or use rackt-cli one
-#. $RACKT_PATH/tasks/getFilePath
-#karmaConfig=`getFilePath karma.conf.js`
-
-NODE_ENV=test $zuul --local 8080 -- ./lib/components/__tests__/Cmp1-test.js
+NODE_ENV=test $zuul --local 8080 -- ./lib/components/__tests__/**/*.js
