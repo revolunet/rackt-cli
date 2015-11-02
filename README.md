@@ -56,9 +56,8 @@ The `release` command runs `test`, and `build` command, then updates your CHANGE
 
 #### `test`
 
-The `test` command runs [karma](http://karma-runner.github.io/), using [mocha](http://mochajs.org/).
-It will look for files under `lib/` suffixed with `-test.js`.
-You can put these files alongside your source, or under sub-folders like `__tests__/`.
+The `test` command runs [testem](https://github.com/airportyh/testem), using [mocha](http://mochajs.org/).
+It will look for files under `lib/__tests__/` subfolder.
 
 #### `pages`
 
