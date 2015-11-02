@@ -1,6 +1,6 @@
 #!/bin/bash -e
 
-originate=./node_modules/.bin/originate
+originate=$RACKT_PATH/node_modules/.bin/originate
 
 $originate ${2-react-component-revolunet} $1
 
