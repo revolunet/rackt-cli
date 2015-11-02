@@ -1,6 +1,6 @@
 {
   "name": "rackt-cli-revolunet",
-  "version": "0.5.9",
+  "version": "0.5.10",
   "description": "Command line interface for automating common tasks when building React.js components",
   "main": "./bin/rackt",
   "bin": {
@@ -27,6 +27,8 @@
     "babel-runtime": "^6.0.14",
     "eslint": "^1.6.0",
     "eslint-plugin-react": "^3.5.1",
+    "expect": "1.12.2",
+    "expect-jsx": "2.1.0",
     "loom": "^3.1.2",
     "minimist": "^1.2.0",
     "mocha": "^2.3.3",
@@ -35,8 +37,8 @@
     "react-addons-test-utils": "0.14.1",
     "react-dom": "^0.14.1",
     "rf-release": "mzabriskie/rf-release",
+    "testem": "^0.9.8",
     "webpack": "^1.12.2",
-    "webpack-dev-server": "^1.12.0",
-    "testem": "^0.9.8"
+    "webpack-dev-server": "^1.12.0"
   }
 }
