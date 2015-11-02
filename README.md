@@ -2,7 +2,9 @@
 
 Command line interface for automating common tasks when building React.js components.
 
-Maintained fork of https://github.com/mzabriskie/rackt-cli with some improvements
+This is a maintained fork of https://github.com/mzabriskie/rackt-cli with some improvements.
+
+See motivation & demo here : [blog post](http://blog.revolunet.com/blog/2015/11/01/dev-workflow-with-rackt-cli/)
 
 ## Installing
 
@@ -62,6 +64,11 @@ It will look for files under `lib/__tests__/` subfolder.
 #### `pages`
 
 The `pages` command will deploy your examples to a `gh-pages` branch.
+
+## Todo
+
+ - Better initial README
+ - Better examples homepage
 
 ## License
 
