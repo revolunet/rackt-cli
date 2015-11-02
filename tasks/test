@@ -1,5 +1,4 @@
 #!/bin/bash
 
-zuul=./node_modules/.bin/zuul
+NODE_ENV=test ./node_modules/.bin/testem ci
 
-NODE_ENV=test $zuul --phantom ./lib/components/__tests__/**/*.js 

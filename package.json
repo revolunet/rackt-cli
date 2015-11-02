@@ -1,6 +1,6 @@
 {
   "name": "rackt-cli-revolunet",
-  "version": "0.5.8",
+  "version": "0.5.9",
   "description": "Command line interface for automating common tasks when building React.js components",
   "main": "./bin/rackt",
   "bin": {
